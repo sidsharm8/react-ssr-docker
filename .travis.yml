@@ -13,11 +13,13 @@ script:
 after_success:
   - docker build -t sidsharm8/multi-ssr-render-server -f ./render-server/Dockerfile.dev ./render-server  
   - docker build -t sidsharm8/multi-ssr-api-server -f ./api-server/Dockerfile.dev ./api-server
+  - docker build -t sidsharm8/multi-ssr-nginx-server -f ./nginx/Dockerfile.dev ./nginx
   #login in to the docker cli
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #take those images and push them to docker hub
   - docker push sidsharm8/multi-ssr-render-server 
   - docker push sidsharm8/multi-ssr-api-server
+  - docker push sidsharm8/multi-ssr-nginx-server
 
 deploy:
   provider: elasticbeanstalk
