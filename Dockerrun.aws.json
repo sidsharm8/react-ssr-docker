@@ -7,7 +7,7 @@
 			"hostname": "client",
 			"essential": false,
             "memory": 128,
-            "links" : ["server"],
+            "links" : ["server"]
             
 		},
 		{
