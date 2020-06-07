@@ -5,7 +5,7 @@ services:
 
 
 before_install:
-  - docker build -t sidsharm8/ssr-render-server -f ./render-server/Dockerfile.dev ./remder-server
+  - docker build -t sidsharm8/ssr-render-server -f ./render-server/Dockerfile.dev ./render-server
 
 script:
   - docker run sidsharm8/ssr-render-server npm run test
@@ -22,13 +22,14 @@ after_success:
 deploy:
   provider: elasticbeanstalk
   region: us-east-2
-  app: multi-docker
-  env: MultiDocker-env
+  app: multi-ssr
+  env: ReactSsr-env
   bucket_name: elasticbeanstalk-us-east-2-630733097423
-  bucket_path: docker-multi
+  bucket_path: multi-ssr
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
-
+  
+  
 
