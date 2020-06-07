@@ -4,5 +4,5 @@ const keys = {
   apiHost: process.env.API_HOST,
   apiPort: process.env.API_PORT,
 };
-console.log(process.env.RENDER_PORT);
+
 export default keys;

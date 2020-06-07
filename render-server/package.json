@@ -7,12 +7,12 @@
     "dev": "npm-run-all --parallel dev:*",
     "build": "npm-run-all --parallel build:*",
     "dev:server": "nodemon --watch build --exec node build/bundle.js",
-    "build:server": "node build/bundle.js",
     "dev:build-server": "webpack --config webpack.server.js --watch",
     "build:build-server": "webpack --config webpack.server.js",
     "dev:build-client": "webpack --config webpack.client.js --watch",
     "build:build-client": "webpack --config webpack.client.js",
-    "test": "jest"
+    "test": "jest",
+    "start": "node build/bundle.js"
   },
   "author": "",
   "license": "ISC",
