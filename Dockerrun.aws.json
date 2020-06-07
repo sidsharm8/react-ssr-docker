@@ -7,7 +7,13 @@
 			"hostname": "client",
 			"essential": false,
             "memory": 128,
-            "links" : ["server"]			
+            "links" : ["server"],
+            "portMappings" : [
+				{
+					"hostPort" : 80,
+					"containerPort" : 3000
+				}
+			],			
 		},
 		{
 			"name": "server",
@@ -15,20 +21,6 @@
 			"hostname": "api",
 			"essential": false,
 			"memory": 128				
-        },
-        {
-			"name": "nginx",
-			"image": "sidsharm8/multi-ssr-nginx-server",
-			"hostname": "nginx",
-			"essential": true,
-			"portMappings" : [
-				{
-					"hostPort" : 80,
-					"containerPort" : 80
-				}
-			],
-			"links" : ["client", "server"],
-			"memory": 128				
-		}		
+        }        
 	]
 }
