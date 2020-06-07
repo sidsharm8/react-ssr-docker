@@ -3,7 +3,7 @@
 	"containerDefinitions" : [
 		{
 			"name": "client",
-			"image": "sidsharm8/ssr-render-server",
+			"image": "sidsharm8/multi-ssr-render-server",
 			"hostname": "client",
 			"essential": false,
             "memory": 128,
