@@ -3,7 +3,7 @@
 	"containerDefinitions" : [
 		{
 			"name": "client",
-			"image": "sidsharm8/multi-ssr-render-server",
+			"image": "sidsharm8/multi-ssr-render-server:1",
 			"hostname": "client",
 			"essential": false,
             "memory": 128,
@@ -11,14 +11,14 @@
 		},
 		{
 			"name": "server",
-			"image": "sidsharm8/multi-ssr-api-server",
+			"image": "sidsharm8/multi-ssr-api-server:1",
 			"hostname": "api",
 			"essential": false,
 			"memory": 128				
         },
         {
 			"name": "nginx",
-			"image": "sidsharm8/multi-ssr-nginx-server",
+			"image": "sidsharm8/multi-ssr-nginx-server:1",
 			"hostname": "nginx",
 			"essential": true,
 			"portMappings" : [

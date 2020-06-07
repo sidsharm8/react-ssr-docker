@@ -11,15 +11,15 @@ script:
   - docker run sidsharm8/ssr-render-server npm run test
 
 after_success:
-  - docker build -t sidsharm8/multi-ssr-render-server ./render-server  
-  - docker build -t sidsharm8/multi-ssr-api-server -f ./api-server/Dockerfile.dev ./api-server 
-  - docker build -t sidsharm8/multi-ssr-nginx-server -f ./nginx/Dockerfile.dev ./nginx
+  - docker build -t sidsharm8/multi-ssr-render-server:1 ./render-server  
+  - docker build -t sidsharm8/multi-ssr-api-server:1 -f ./api-server/Dockerfile.dev ./api-server 
+  - docker build -t sidsharm8/multi-ssr-nginx-server:1 -f ./nginx/Dockerfile.dev ./nginx
   #login in to the docker cli
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #take those images and push them to docker hub
-  - docker push sidsharm8/multi-ssr-render-server 
-  - docker push sidsharm8/multi-ssr-api-server
-  - docker push sidsharm8/multi-ssr-nginx-server
+  - docker push sidsharm8/multi-ssr-render-server:1 
+  - docker push sidsharm8/multi-ssr-api-server:1
+  - docker push sidsharm8/multi-ssr-nginx-server:1
 
 deploy:
   provider: elasticbeanstalk
