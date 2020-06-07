@@ -1,0 +1,16 @@
+.sort {
+  display: flex;
+  margin-top: 15px;
+  padding: 0 15px;
+  @media (min-width: 1024px) {
+    width: 25%;
+    align-self: flex-end;
+  }
+  .sortLabel {
+    width: 100%;
+
+    & select {
+      width: 100%;
+    }
+  }
+}
