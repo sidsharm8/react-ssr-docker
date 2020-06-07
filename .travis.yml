@@ -22,10 +22,10 @@ after_success:
 deploy:
   provider: elasticbeanstalk
   region: us-east-2
-  app: multi-ssr
+  app: react-ssr
   env: ReactSsr-env
   bucket_name: elasticbeanstalk-us-east-2-630733097423
-  bucket_path: multi-ssr
+  bucket_path: react-ssr
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
