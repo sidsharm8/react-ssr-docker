@@ -8,19 +8,20 @@
 			"essential": false,
             "memory": 128,
             "links" : ["server"],
-            "portMappings" : [
-				{
-					"hostPort" : 80,
-					"containerPort" : 3000
-				}
-			]
+            
 		},
 		{
 			"name": "server",
 			"image": "sidsharm8/multi-ssr-api-server",
 			"hostname": "api",
 			"essential": true,
-			"memory": 128				
+            "memory": 128,
+            "portMappings" : [
+				{
+					"hostPort" : 80,
+					"containerPort" : 5000
+				}
+			]				
         }        
 	]
 }
