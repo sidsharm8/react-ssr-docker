@@ -11,7 +11,7 @@ script:
   - docker run sidsharm8/ssr-render-server npm run test
 
 after_success:
-  - docker build -t sidsharm8/multi-ssr-render-server -f ./render-server/Dockerfile.dev ./render-server  
+  - docker build -t sidsharm8/multi-ssr-render-server ./render-server  
   - docker build -t sidsharm8/multi-ssr-api-server -f ./api-server/Dockerfile.dev ./api-server 
   - docker build -t sidsharm8/multi-ssr-nginx-server -f ./nginx/Dockerfile.dev ./nginx
   #login in to the docker cli
