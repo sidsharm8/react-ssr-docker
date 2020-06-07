@@ -1,0 +1,20 @@
+{
+	"AWSEBDockerrunVersion": 2,
+	"containerDefinitions" : [
+		{
+			"name": "client",
+			"image": "sidsharm8/ssr-render-server",
+			"hostname": "client",
+			"essential": false,
+            "memory": 128,
+            "links" : ["server"]			
+		},
+		{
+			"name": "server",
+			"image": "sidsharm8/multi-ssr-api-server",
+			"hostname": "api",
+			"essential": false,
+			"memory": 128				
+		}		
+	]
+}
