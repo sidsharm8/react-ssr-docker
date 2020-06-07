@@ -72,8 +72,8 @@ app.get("*", (req, res) => {
 
 /* const PORT = keys.renderPort; */
 const PORT = keys.renderPort;
-app.listen(PORT, () => {
-	console.log(`Listening on port : ${PORT}`);
+app.listen(3000, () => {
+	console.log(`Listening on port : 3000`);
 });
 // sets up http/2 server using spdy
 /* spdy.createServer(spdyOptions, app).listen(PORT, error => {
