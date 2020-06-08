@@ -24,10 +24,10 @@ after_success:
 deploy:
   provider: elasticbeanstalk
   region: us-east-2
-  app: react-morty-ssr
+  app: rick-morty-ssr
   env: RickMortySsr-env
   bucket_name: elasticbeanstalk-us-east-2-630733097423
-  bucket_path: react-morty-ssr
+  bucket_path: rick-morty-ssr
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
