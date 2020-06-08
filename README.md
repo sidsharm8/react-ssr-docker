@@ -1,4 +1,4 @@
-# react-ssr-docker
+# react-ssr-docker (http://rickmortyssr-env.eba-z8dvikyt.us-east-2.elasticbeanstalk.com/)
 
 ## OVERVIEW : 
 
